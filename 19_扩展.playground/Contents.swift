@@ -65,7 +65,8 @@ extension Int{
 //2)添加新的变异方法（作用于结构体和枚举中，要修改self或其他属性的时候）
 extension Int{
     mutating func square(){
-        print("\(self)的平方是：", appendNewline: false  )
+        //print("\(self)的平方是：", appendNewline: false  )
+        print("\(self)的平方是：", terminator: "")
         self = self * self
         print("\(self)")
     }
@@ -108,9 +109,12 @@ extension Int{
 func 打印判断数字的符号(数组: [Int]){
     for 数字 in 数组{
         switch 数字.判断数字{
-            case .负数: print("- ", appendNewline: false)
-            case .零: print("0 ", appendNewline: false)
-            case .正数: print("+ ", appendNewline: false)
+            //case .负数: print("- ", appendNewline: false)
+            //case .零: print("0 ", appendNewline: false)
+            //case .正数: print("+ ", appendNewline: false)
+            case .负数: print("- ", terminator: "")
+            case .零: print("0 ", terminator: "")
+            case .正数: print("+ ", terminator: "")
         }
     }
 }

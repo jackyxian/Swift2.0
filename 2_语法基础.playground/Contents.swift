@@ -19,7 +19,7 @@ let 🐮 = "cow"
 
 print(π)
 print(say)
-print(名字, appendNewline: false)
+print(名字)
 print(🐮)
 
 let cat = "🐱"; print(cat)
@@ -40,14 +40,18 @@ let userName = "华仔讲Swift2.0"
 let pi = 3.1415
 let 圆的面积 = pi * pow(3, 2)
 
-let decimalInteger = 17let binaryInteger = 0b10001       // 二进制的17let octalInteger = 0o21           // 八进制的17let hexadecimalInteger = 0x11     // 十六进制的17
+let decimalInteger = 17
+let binaryInteger = 0b10001       // 二进制的17
+let octalInteger = 0o21           // 八进制的17
+let hexadecimalInteger = 0x11     // 十六进制的17
 
 let decimalDouble = 12.1875
 let exponentDouble = 1.21875e1
 let hexadecimalDouble = 0xC.3p0
 
 let paddedDouble = 000123.456
-let oneMillion = 1_000_000let justOverOneMillion = 1_000_000.000_000_1
+let oneMillion = 1_000_000
+let justOverOneMillion = 1_000_000.000_000_1
 
 
 // cannotBeNegative: UInt8 = -1
@@ -59,7 +63,8 @@ let twoThousand: UInt16 = 2_000
 let one: UInt8 = 1
 let twoThousandAndOne = twoThousand + UInt16(one)
 
-let three = 3let pointOneFourOneFiveNine = 0.14159
+let three = 3
+let pointOneFourOneFiveNine = 0.14159
 let pis = Double(three) + pointOneFourOneFiveNine
 // pis 等于 3.14159，所以被推测为 Double 类型
 
@@ -104,12 +109,13 @@ if let 是数字么 = Int(数字){
     print("不是数字")
 }
 
-var emptyStrng : String?
+var emptyStrng: String?
 print(emptyStrng)
 
 let 奖金:Int! = 8_000
 print(奖金)
-//断言
+
+//断言
 let 年龄 = 16
 assert(年龄>18, "年龄没到18岁不许喝酒！")
 

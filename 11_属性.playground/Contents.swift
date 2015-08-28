@@ -81,7 +81,8 @@ print("发思特战士的总攻击力：\(发思特战士.总攻击力)")
 class 经验计算{
     var 总经验 : Int = 0{
         willSet{
-            print("当前经验是：\(newValue)，",false)
+            //print("当前经验是：\(newValue)，",false)
+            print("当前经验是：\(newValue)，",terminator:"")
         }
         didSet{
             print("增加经验\(总经验 - oldValue)")

@@ -59,7 +59,8 @@ var 某坐标 = 角色坐标()
 enum 猜拳{
     case 剪刀,石头,布
     mutating func 出拳(){
-        print("我出拳：\(self), ",false)
+        //print("我出拳：\(self), ",false)
+        print("我出拳：\(self)，",terminator:"")
         switch self{
             case 剪刀: self = 石头
             case 石头: self = 布

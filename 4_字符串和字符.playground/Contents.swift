@@ -7,8 +7,11 @@ import UIKit
 let str = "Hello, playground"
 
 //初始化空字符串
-let emptyString = ""               // 空字符串字面量let anotherEmptyString = String()  // 初始化 String 实例
-if emptyString.isEmpty {    print("什么都没有")}
+let emptyString = ""               // 空字符串字面量
+let anotherEmptyString = String()  // 初始化 String 实例
+if emptyString.isEmpty {
+    print("什么都没有")
+}
 
 //字符串的可变性
 var variableString = "Horse"
@@ -26,10 +29,15 @@ let rmb: Character = "¥"
 print(rmb)
 
 //连接字符串和字符
-let string1 = "你好"let string2 = " 华仔"var welcome = string1 + string2print(welcome)
+let string1 = "你好"
+let string2 = " 华仔"
+var welcome = string1 + string2
+print(welcome)
 // welcome 现在等于 "你好 华仔"
 
-var instruction = "我喜欢 "instruction += string2print(instruction)
+var instruction = "我喜欢 "
+instruction += string2
+print(instruction)
 // instruction 现在等于　"我喜欢 华仔"
 
 let exclamationMark: Character = "！"
@@ -39,8 +47,10 @@ print(welcome)
 
 
 //字符串插入值
-let multiplier = 3let message = "\(multiplier) 乘以 2.5 是 \(Double(multiplier) * 2.5)"
-print(message)
+let multiplier = 3
+let message = "\(multiplier) 乘以 2.5 是 \(Double(multiplier) * 2.5)"
+print(message)
+
 
 //unicode
 let dogString = "Dog!🐶"
@@ -55,7 +65,10 @@ for codeUnit in dogString.utf16{
 }
 print("")
 
-for scalar in dogString.unicodeScalars {    print("\(scalar.value) ", false)}print("")
+for scalar in dogString.unicodeScalars {
+    print("\(scalar.value) ", false)
+}
+print("")
 
 
 //计算字符数量
@@ -75,7 +88,8 @@ print(strs.endIndex)    //strs的最后1个下标
 let a1 = strs[strs.startIndex]              //第1个下标的字符
 let a2 = strs[strs.startIndex.successor()]  //第1个下标的下一个下标
 let a3 = strs[strs.endIndex.predecessor()]  //最后一个下标的前1个下标
-let index = advance(strs.startIndex, 7)
+//let index = advance(strs.startIndex, 7)
+let index = str.startIndex.advancedBy(7)
 print("a1 = \(a1), a2 = \(a2), a3 = \(a3), index = \(index)")
 print("strs[index] = \(strs[index])")
 
@@ -91,15 +105,19 @@ strHello.insert("！", atIndex: strHello.endIndex)//在语句最尾部分插入�
 print(strHello)
 
 //5.插入字符串
-strHello.splice("你学会了吗？".characters, atIndex: strHello.startIndex)//在语句开头插入字符串
+//strHello.splice("你学会了吗？".characters, atIndex: strHello.startIndex)//在语句开头插入字符串
+strHello.insertContentsOf("你学会了吗？".characters, at: strHello.startIndex)
 print(strHello)
 
 //6.删除字符_成功就返回删除了的某个字符
-strHello.removeAtIndex(advance(strHello.startIndex, 7))
+//strHello.removeAtIndex(advance(strHello.startIndex, 7))
+strHello.removeAtIndex(strHello.startIndex.advancedBy(7))
 print(strHello)
 
 //7.删除字符串_成功就返回删除了的某个字符串
-let range = advance(strHello.endIndex, -6)..<strHello.endIndex
+//let range = advance(strHello.endIndex, -6)..<strHello.endIndex
+//strHello.removeRange(range)
+let range = strHello.endIndex.advancedBy(-6)..<strHello.endIndex
 strHello.removeRange(range)
 print(strHello)
 

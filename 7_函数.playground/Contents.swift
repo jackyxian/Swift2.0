@@ -198,7 +198,8 @@ print("调用函数类型作为返回值：\(判断加减(1>0)(10))")
 var num = 10
 let 函数 = 判断加减(num > 0)
 while num != 0{
-    print("\(num),", appendNewline: false)
+    //print("\(num),", appendNewline: false)
+    print("\(num) ", terminator: " ")
     //调用常量函数
     num=函数(num)
 }

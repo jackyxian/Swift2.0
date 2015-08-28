@@ -84,7 +84,9 @@ matrixdemo[2,2] = 9
 
 print("矩阵中的项是：")
 for item in matrixdemo.grid{
-    print("\(item),", false)
+    //print("\(item),", false)
+    print("\(item),", terminator: "")
+
 }
 
 

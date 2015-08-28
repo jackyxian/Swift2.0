@@ -46,7 +46,8 @@ print("现在巴士经过的站点有：\(巴士5号)")
 
 //4.5循环迭代数组数据
 for road in 巴士5号{
-    print(road + " ", appendNewline: false)
+    //print(road + " ", appendNewline: false)
+    print(road, terminator: " ")
 }
 print("")
 
@@ -106,7 +107,8 @@ if(zoon.contains("老虎")){
 //6.迭代数据
 print("动物园里有：")
 for animal in zoon{
-    print("\(animal) ", appendNewline: false)
+    //print("\(animal) ", appendNewline: false)
+    print("\(animal) ", terminator: " ")
 }
 print("")
 
@@ -208,7 +210,8 @@ for(key,value)in 机场A{
 
 
 //把keys转为数组
-let air = 机场B.keys.array
+//let air = 机场B.keys.array
+let air = Array(机场B.keys)
 print(air)
 //当然你也可以强制转换为[String]
 let 航班 = [String](机场B.values)
