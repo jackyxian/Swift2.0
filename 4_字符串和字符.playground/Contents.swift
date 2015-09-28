@@ -15,7 +15,7 @@ if emptyString.isEmpty {
 
 //字符串的可变性
 var variableString = "Horse"
-variableString = " and carriage"
+variableString += " and carriage"
 // variableString 现在为 "Horse and carriage"
 let constantString = "Highlander"
 //constantString += " and another Highlander"
