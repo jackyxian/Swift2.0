@@ -86,8 +86,9 @@ print(strs.endIndex)    //strs的最后1个下标
 
 //2.通过下标获取字符（字符串就是字符的数组，所以下标获取字符，下标都是从0开始）
 let a1 = strs[strs.startIndex]              //第1个下标的字符
-let a2 = strs[strs.startIndex.successor()]  //第1个下标的下一个下标
-let a3 = strs[strs.endIndex.predecessor()]  //最后一个下标的前1个下标
+let a2 = strs[strs.startIndex.successor()]  //第1个下标的下1个下标的字符
+let a3 = strs[strs.endIndex.predecessor()]  //最后一个字符
+
 //let index = advance(strs.startIndex, 7)
 let index = str.startIndex.advancedBy(7)
 print("a1 = \(a1), a2 = \(a2), a3 = \(a3), index = \(index)")

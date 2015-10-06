@@ -117,5 +117,6 @@ print(奖金)
 
 //断言
 let 年龄 = 16
+//assert(condition: Bool, message: String)
 assert(年龄>18, "年龄没到18岁不许喝酒！")
 
