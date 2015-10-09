@@ -145,7 +145,7 @@ res = zoon2.isSupersetOf(zoon1)
 print("zoon2是zoon1的父集吗？\(res)")
 
 res = zoon2.isDisjointWith(zoon3)
-print("zoon2和zoon1没有相同的元素吗？\(res)")
+print("zoon2和zoon3没有相同的元素吗？\(res)")
 
 
 
